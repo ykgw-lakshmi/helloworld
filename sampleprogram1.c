@@ -39,6 +39,7 @@ int ReadConfiguration() {
 
 }
 int main(){
+    
     printf("print all the configuration data");
     return ReadConfiguration();
 }

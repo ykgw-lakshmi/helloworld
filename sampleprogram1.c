@@ -9,15 +9,14 @@ int isFileExists(const char *path)
     if (fptr == NULL){
 
       printf("\nFile doesn't exists %s\n",path);
+      fclose(fptr);
       return 0;
 
     }else{
       printf("File exists \n");
+      fclose(fptr);
+      return 1;
     }
-
-    fclose(fptr);
-
-    return 1;
 }
 int ReadConfiguration() {
   JSON_Value *root_value;

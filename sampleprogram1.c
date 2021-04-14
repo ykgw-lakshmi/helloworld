@@ -15,7 +15,6 @@ int isFileExists(const char *path)
       printf("File exists \n");
     }
 
-    // File exists hence close file and return true.
     fclose(fptr);
 
     return 1;
@@ -43,5 +42,4 @@ int ReadConfiguration() {
 int main(){
     printf("printing all the configuration data");
     return ReadConfiguration();
-    // return 0;
 }

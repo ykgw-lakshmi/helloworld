@@ -8,7 +8,7 @@ int isFileExists(const char *path)
     // If file does not exists 
     if (fptr == NULL){
 
-      printf("\nFile doesn't exists %s\n",path);
+      printf("\n File doesn't exists %s\n",path);
       fclose(fptr);
       return 0;
 
@@ -23,7 +23,7 @@ int ReadConfiguration() {
 
   if (!isFileExists("example.json"))
     {
-        printf("\nConfiguration file does not exists\n");
+        printf("\n Configuration file does not exists\n");
       return 0;
     }
 
@@ -39,6 +39,6 @@ int ReadConfiguration() {
 
 }
 int main(){
-    printf("printing all the configuration data");
+    printf("print all the configuration data");
     return ReadConfiguration();
 }

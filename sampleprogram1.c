@@ -9,16 +9,18 @@ int isFileExists(const char *path)
     if (fptr == NULL){
 
       printf("\nFile doesn't exists %s\n",path);
+      fclose(fptr);
       return 0;
 
     }else{
       printf("File exists \n");
+      fclose(fptr);
+      return 1;
     }
 
     // File exists hence close file and return true.
-    fclose(fptr);
-
-    return 1;
+    
+   
 }
 int ReadConfiguration() {
   /* parsing json and validating output */

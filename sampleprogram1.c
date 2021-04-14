@@ -20,12 +20,12 @@ int isFileExists(const char *path)
     return 1;
 }
 int ReadConfiguration() {
-  /* parsing json and validating output */
   JSON_Value *root_value;
 
   if (!isFileExists("example.json"))
     {
         printf("\nConfiguration file does not exists\n");
+      return 0;
     }
 
   root_value = json_parse_file("example.json");

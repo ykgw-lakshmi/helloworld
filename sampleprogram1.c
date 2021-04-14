@@ -17,18 +17,14 @@ int isFileExists(const char *path)
       fclose(fptr);
       return 1;
     }
-
-    // File exists hence close file and return true.
-    
-   
 }
 int ReadConfiguration() {
-  /* parsing json and validating output */
   JSON_Value *root_value;
 
   if (!isFileExists("example.json"))
     {
         printf("\nConfiguration file does not exists\n");
+      return 0;
     }
 
   root_value = json_parse_file("example.json");
@@ -45,5 +41,4 @@ int ReadConfiguration() {
 int main(){
     printf("printing all the configuration data");
     return ReadConfiguration();
-    // return 0;
 }

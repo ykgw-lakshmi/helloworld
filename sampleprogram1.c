@@ -10,7 +10,7 @@ int isFileExists(const char *path)
 
       printf("\n File doesn't exists %s\n",path);
       fclose(fptr);
-      return 0;
+      return 0
 
     }else{
       printf("File exists \n");

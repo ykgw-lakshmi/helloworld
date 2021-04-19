@@ -10,7 +10,7 @@ link_directories(samplex ${CMAKE_SOURCE_DIR}/lib)
 
 add_executable(samplex sampleprogram1.c)
 
-target_link_libraries(samplex parson.lib)
+target_link_libraries(samplex libparson.a)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
